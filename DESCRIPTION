@@ -1,15 +1,14 @@
 Package: sleeprutil
-Title: What the Package Does (One Line, Title Case)
+Title: Utilities for NIH (SLEEPR) grant
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Joe",
+           family = "Skufca",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+           email = "jskufca@clarkson.edu",
+           comment = c(ORCID = "https://orcid.org/0000-0002-1106-5657"))
+Description: Contains utility functions in support of NIH funded grant (SLEEPR).  These utilities allow for improved data managemnt, file manipulation to support upload and download, and other functionality to improve data maintenance practices.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
