@@ -28,21 +28,21 @@ You can install the  development version from [GitHub](https://github.com/) with
 # install.packages("devtools")
 devtools::install_github("jskufca/sleeprutil")
 ```
-## Example
+## Example Usage
 
-This is a basic example which shows you how to solve a common problem:
+### Processing of PAL data
 
-```{r example}
+The PAL device will record activity information, which can then be output as a .csv file. That file will need to be processed so that it is in the proper templated format for the Redcap database.   
+
+Suppose the data is stored in file `this_pal.csv`.  Then executing the following code:
+
+```{r example }
 #library(sleeprutil)
-## basic example code
+#template_pal_data()
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+Will open a dialogue box that allows the user to select the PAL file.  The function will then create an associated csv file, stored as
 
-
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/master/examples>.
-
-You can also embed plots, for example:
+{this_pal_templated.csv}
 
 
