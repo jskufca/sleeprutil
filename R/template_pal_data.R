@@ -10,7 +10,7 @@
 #'
 template_pal_data <- function() {
   myfile=file.choose() # PAL file
-  df_pal=readr::read_csv2(myfile, col_types = cols(.default = "c"),skip=1) %>%
+  df_pal=readr::read_csv2(myfile, col_types = readr::cols(.default = "c"),skip=1) %>%
     dplyr::select(-1) # read PAL
   a=names(df_temp)[458:502] # get proper variable names from the standard REDCAP template
   names(df_pal)=a
