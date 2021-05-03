@@ -20,4 +20,5 @@ Depends:
 Imports: 
     readr,
     dplyr,
-    magrittr
+    magrittr,
+    filesstrings
