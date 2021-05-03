@@ -10,4 +10,3 @@
 #' @importFrom magrittr %>%
 NULL
 #> NULL
-
