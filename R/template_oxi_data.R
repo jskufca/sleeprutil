@@ -6,7 +6,7 @@
 #'
 template_oxi_data <- function() {
   #myfile="SmithJohnTrial.pdf"
-  myfile=file.choose() %>% basename() #oxi file
+  myfile=file.choose()  #oxi file
   oxi_text=pdftools::pdf_text(myfile)
   dfr=oxi_text %>%
     readr::read_lines() %>%
