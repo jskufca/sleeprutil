@@ -31,11 +31,25 @@ Suppose the data is stored in file `this_pal.csv`. Then executing the
 following code:
 
 ``` r
-#library(sleeprutil)
-#template_pal_data()
+library(sleeprutil)
+template_pal_data()
 ```
 
 Will open a dialogue box that allows the user to select the PAL file.
 The function will then create an associated csv file, stored as
 
 {this\_pal\_templated.csv}
+
+### Processing oximetry data file
+
+The oximetry data is typically provided as a pdf file. Suppose this file
+is named `this_oxi.pdf`. Then executeing the following code:
+
+``` r
+template_oxi_data()
+```
+
+Will open a dialogue box that allows the user to select the oxi pdf
+file. The function will then create an associated csv file, stored as
+
+{this\_oxi\_templated.csv}
