@@ -1,6 +1,6 @@
 Package: sleeprutil
 Title: Utilities for NIH (SLEEPR) grant
-Version: 0.0.0.9000
+Version: 0.0.1.9000
 Authors@R: 
     person(given = "Joe",
            family = "Skufca",
@@ -16,9 +16,16 @@ RoxygenNote: 7.1.1
 URL: https://github.com/jskufca/sleeprutil
 BugReports: https://github.com/jskufca/sleeprutil/issues
 Depends: 
-    R (>= 2.10)
+    R (>= 2.10) 
 Imports: 
     readr,
     dplyr,
     magrittr,
-    filesstrings
+    filesstrings,
+    pdftools,
+    stringi,
+    stringr,
+    lubridate,
+    tibble,
+    purrr,
+    tidyselect
