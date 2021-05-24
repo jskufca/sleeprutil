@@ -1,4 +1,4 @@
-#' Title
+#' template_oxi_data
 #'
 #' @return Nothing.  Runs for side effect (creates a file)
 #' @export
@@ -26,7 +26,7 @@ template_oxi_data <- function() {
   #I am keeping as string
   # TODO ensure George concurs
 
-  a=dfr$value[5] %>% stringr::str_split_fixed("  ",30) %>%
+  a=dfr$value[6] %>% stringr::str_split_fixed("  ",30) %>%
     stringi::stri_remove_empty()
   date_nocturnal_oxi=a[1] %>% stringr::str_split(":") %>% purrr::pluck(1,2) %>% stringr::str_trim() %>%
     lubridate::as_date(format="%d %B %Y ") %>% format("%m-%d-%Y")
@@ -46,16 +46,16 @@ template_oxi_data <- function() {
     dfr$value[x] %>% stringr::str_split("   ") %>%
       unlist() %>% stringi::stri_remove_empty() %>% purrr::pluck(item) %>% as.numeric()
   }
-  oxi_total_events=pluck_value(9)
-  oxi_time_events = pluck_value(10)
-  oxi_ave_event_duration=pluck_value(11)
-  odi= pluck_value(13)
-  oxi_artifact = pluck_value(14)
-  oxi_index = pluck_value(15)
-  oxi_basal= pluck_value(18)
-  oxi_time_less_88= pluck_value(19)
-  oxi_events_less_88= pluck_value(20)
-  oxi_below_90=pluck_value(11,7)
+  oxi_total_events=pluck_value(11)
+  oxi_time_events = pluck_value(12)
+  oxi_ave_event_duration=pluck_value(13)
+  odi= pluck_value(15)
+  oxi_artifact = pluck_value(16)
+  oxi_index = pluck_value(17)
+  oxi_basal= pluck_value(20)
+  oxi_time_less_88= pluck_value(21)
+  oxi_events_less_88= pluck_value(22)
+  oxi_below_90=pluck_value(13,7)
 
 
   #### Assemble into dataframe:
