@@ -2,7 +2,7 @@
 % Please edit documentation in R/template_oxi_data.R
 \name{template_oxi_data}
 \alias{template_oxi_data}
-\title{Title}
+\title{template_oxi_data}
 \usage{
 template_oxi_data()
 }
@@ -10,5 +10,5 @@ template_oxi_data()
 Nothing.  Runs for side effect (creates a file)
 }
 \description{
-Title
+template_oxi_data
 }
