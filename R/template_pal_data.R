@@ -14,7 +14,7 @@ template_pal_data <- function() {
   df_pal=readr::read_csv2(myfile, col_types = readr::cols(.default = "c"),skip=1) %>%
     dplyr::select(-1) # read PAL
   df_temp=redcap_template
-  a=names(df_temp)[458:502] # get proper variable names from the standard REDCAP template
+  a=names(df_temp)[480:524] # get proper variable names from the standard REDCAP template
   names(df_pal)=a
   dftry=dplyr::bind_rows(df_temp, df_pal)
   output_file=myfile %>%
