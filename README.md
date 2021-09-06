@@ -9,6 +9,8 @@
 The goal of *sleeprutil* is to facilitate data aggregation into the
 redcap database used for the NIH funded *SLEEPR* grant.
 
+Changes to these files are required when updates are made to the underlying Redcap database where the SLEEPR data is stored.
+
 ## Installation
 
 You can install the development version from
