@@ -1,6 +1,6 @@
 Package: sleeprutil
 Title: Utilities for NIH (SLEEPR) grant
-Version: 0.0.4.9000
+Version: 0.0.5.9000
 Authors@R: 
     person(given = "Joe",
            family = "Skufca",

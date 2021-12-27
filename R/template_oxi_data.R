@@ -68,8 +68,8 @@ template_oxi_data <- function() {
     oxi_time_less_88,oxi_events_less_88,oxi_below_90) %>%
     dplyr::mutate(dplyr::across(tidyselect::everything(),as.character))
 
-  df_temp=redcap_template
-  dftry=dplyr::bind_rows(df_temp, dfout)
+  dftemp=redcap_template
+  dftry=dplyr::bind_rows(dftemp, dfout)
 
   ### Write to file
 
