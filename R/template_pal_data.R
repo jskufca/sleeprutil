@@ -13,10 +13,10 @@ template_pal_data <- function() {
   myfile=file.choose() # PAL file
   df_pal=readr::read_csv2(myfile, col_types = readr::cols(.default = "c"),skip=1) %>%
     dplyr::select(-1) # read PAL
-  df_temp=redcap_template
-  a=names(df_temp)[480:524] # get proper variable names from the standard REDCAP template
+  dftemp=redcap_template
+  a=names(dftemp)[480:524] # get proper variable names from the standard REDCAP template
   names(df_pal)=a
-  dftry=dplyr::bind_rows(df_temp, df_pal)
+  dftry=dplyr::bind_rows(dftemp, df_pal)
   output_file=myfile %>%
     filesstrings::before_last_dot() %>% paste0("_templated.csv")
   readr::write_csv(dftry,output_file,na="")
