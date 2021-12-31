@@ -1,12 +1,20 @@
 #' template_oxi_data
 #'
-#' @return Nothing.  Runs for side effect (creates a file)
+#' @param testing   logical (FALSE) set to true only for testing
+#'
+#' @return Nothing.  Runs for side effect (creates a file).
+#'                   In test mode, returns dataframe of output that would written to csv
 #' @export
 #'
 #'
-template_oxi_data <- function() {
-  #myfile="SmithJohnTrial.pdf"
-  myfile=file.choose()  #oxi file
+template_oxi_data <- function(testing=FALSE) {
+
+  if (testing)  {
+    myfile=test_path("oxitest.pdf")
+  } else {
+    myfile=file.choose()  #oxi file
+  }
+
   oxi_text=pdftools::pdf_text(myfile)
   dfr=oxi_text %>%
     readr::read_lines() %>%
@@ -75,5 +83,13 @@ template_oxi_data <- function() {
 
   output_file=myfile %>% stringr::str_replace(".pdf","_templated.csv")
   readr::write_csv(dftry,output_file,na="")
+
+  if (testing)  {
+    dftry
+  } else {
+    readr::write_csv(dftry,output_file,na="")
+  }
+
+
 
 }

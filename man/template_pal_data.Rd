@@ -4,10 +4,14 @@
 \alias{template_pal_data}
 \title{template_pal_data}
 \usage{
-template_pal_data()
+template_pal_data(testing = FALSE)
+}
+\arguments{
+\item{testing}{logical (FALSE) set to true only for testing}
 }
 \value{
-Nothing.  Runs for side effect (creates a file)
+Nothing.  Runs for side effect (creates a file).
+In test mode, returns dataframe of output that would written to csv
 }
 \description{
 Allows user to interactively select a .csv file created from PAL device and
