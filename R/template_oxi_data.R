@@ -92,4 +92,12 @@ template_oxi_data <- function(testing=FALSE) {
 
 
 
+  if (testing)  {
+    dftry
+  } else {
+    readr::write_csv(dftry,output_file,na="")
+  }
+
+
+
 }
