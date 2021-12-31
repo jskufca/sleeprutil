@@ -4,10 +4,14 @@
 \alias{template_oxi_data}
 \title{template_oxi_data}
 \usage{
-template_oxi_data()
+template_oxi_data(testing = FALSE)
+}
+\arguments{
+\item{testing}{logical (FALSE) set to true only for testing}
 }
 \value{
-Nothing.  Runs for side effect (creates a file)
+Nothing.  Runs for side effect (creates a file).
+In test mode, returns dataframe of output that would written to csv
 }
 \description{
 template_oxi_data

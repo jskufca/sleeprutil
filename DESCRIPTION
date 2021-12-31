@@ -1,6 +1,6 @@
 Package: sleeprutil
 Title: Utilities for NIH (SLEEPR) grant
-Version: 0.0.5.9000
+Version: 0.0.6.9000
 Authors@R: 
     person(given = "Joe",
            family = "Skufca",
@@ -29,3 +29,6 @@ Imports:
     tibble,
     purrr,
     tidyselect
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
