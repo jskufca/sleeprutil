@@ -1,3 +1,7 @@
+# sleeprutil 0.0.6.9000
+
+* Include a first testing function
+
 # sleeprutil 0.0.5.9000
 
 * Bug fix for template file
